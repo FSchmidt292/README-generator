@@ -79,17 +79,17 @@ const promptRead = (readmeData) => {
           }
         }
       },
-      {
-
-      }
-    ])
+    ])      
+    })
 };
 
-promptRead()
-.then(console.log(readmeData))
-.then(console.log(nameInput));
+promptRead();
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+  fs.writeFile('README.md', data, (err) => {
+    if (err) throw err;
+  });
+};
 
 // TODO: Create a function to initialize app
 function init() {}
