@@ -25,7 +25,7 @@ const promptUser = () => {
                   return true;
               } else {
                   console.log('please enter a description for your project!');
-                  return false;
+                  return: false;
               }
           }
       },
