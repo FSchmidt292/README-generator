@@ -1,10 +1,24 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 // TODO: Create an array of questions for user input
 const nameInput = {};
 
 const promptRead = (readmeData) => {
     return inquirer.prompt([
+      {
+        type: 'input',
+        name: 'userName',
+        message: 'What is your github username?',
+        validate: titleInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('please enter your github username!');
+            return false;
+          }
+        }
+      },
       {
           type: 'input',
           name: 'title',
@@ -34,15 +48,46 @@ const promptRead = (readmeData) => {
       {
           type: 'input',
           name: 'installInput',
-          message: 'enter special installation instructions',
+          message: 'enter special installation instructions required for your project',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'select any licenses you will need to include',
+        choices: ['APACHE 2.0', 'Boost', 'BSD 3', 'MIT', 'N/A'],
+      },
+      {
+        type: 'input',
+        name: 'instruction',
+        message: 'please explain how to operate/use your product'
+      },
+      {
+        type: 'input',
+        name: 'contribution',
+        message: 'please add any contributors/contribution guidelines'
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'please enter your email address',
+        validate: emailInput => {
+          if (emailInput) {
+            return true;
+          } else {
+            console.log('please enter an email address!');
+            return false;
+          }
+        }
       },
       {
 
-      }    
+      }
     ])
 };
 
-promptRead();
+promptRead()
+.then(console.log(readmeData))
+.then(console.log(nameInput));
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
