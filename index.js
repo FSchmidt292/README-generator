@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
-const promptUser = () => {
+const nameInput = {};
+
+const promptRead = (readmeData) => {
     return inquirer.prompt([
       {
           type: 'input',
@@ -25,7 +27,7 @@ const promptUser = () => {
                   return true;
               } else {
                   console.log('please enter a description for your project!');
-                  return: false;
+                  return false;
               }
           }
       },
@@ -40,9 +42,7 @@ const promptUser = () => {
     ])
 };
 
-promptUser();
-
-console.log('hello node!');
+promptRead();
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
