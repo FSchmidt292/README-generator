@@ -33,7 +33,7 @@ const prompts = [
       {
           type: 'input',
           name: 'description',
-          message: 'enter a description for your project',
+          message: 'enter a description for your project:',
           validate: descriptionInput => {
               if (descriptionInput) {
                   return true;
@@ -57,7 +57,7 @@ const prompts = [
       {
         type: 'input',
         name: 'instruction',
-        message: 'Please explain how to operate/use your product'
+        message: 'Please explain how to operate/use your product:'
       },
       {
         type: 'input',
