@@ -12,7 +12,7 @@ const prompts = [
           if (userName) {
             return true;
           } else {
-            console.log('please enter your github username!');
+            console.log('Please enter your github username!');
             return false;
           }
         }
@@ -25,7 +25,7 @@ const prompts = [
             if (title) {
               return true;
             } else {
-              console.log('please enter your projects title!');
+              console.log('Please enter your projects title!');
               return false;
             }
           }
@@ -38,7 +38,7 @@ const prompts = [
               if (descriptionInput) {
                   return true;
               } else {
-                  console.log('please enter a description for your project!');
+                  console.log('Please enter a description for your project!');
                   return false;
               }
           }
@@ -46,33 +46,33 @@ const prompts = [
       {
           type: 'input',
           name: 'installInput',
-          message: 'enter special installation instructions required for your project',
+          message: 'Enter special installation instructions required for your project:',
       },
       {
         type: 'list',
         name: 'license',
-        message: 'select any licenses you will need to include',
+        message: 'Select any licenses you will need to include:',
         choices: ['APACHE 2.0', 'Boost', 'BSD 3', 'MIT', 'N/A'],
       },
       {
         type: 'input',
         name: 'instruction',
-        message: 'please explain how to operate/use your product'
+        message: 'Please explain how to operate/use your product'
       },
       {
         type: 'input',
         name: 'contribution',
-        message: 'please add any contributors/contribution guidelines'
+        message: 'Please add any contributors/contribution guidelines:'
       },
       {
         type: 'input',
         name: 'email',
-        message: 'please enter your email address',
+        message: 'Your email address:',
         validate: emailInput => {
           if (emailInput) {
             return true;
           } else {
-            console.log('please enter an email address!');
+            console.log('Please enter an email address!');
             return false;
           }
         }
@@ -80,7 +80,7 @@ const prompts = [
         {
           type: 'input',
           name: 'test',
-          message: 'please outline any testing procedures taken, or any testing necessary for your project'
+          message: 'Please outline any testing procedures taken, or any testing necessary for your project:'
         },
     ];
 

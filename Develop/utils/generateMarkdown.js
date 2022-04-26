@@ -75,8 +75,8 @@ function generateMarkdown(data) {
 
   ### Questions
   If you have any questions, you can reach me at:
-  eMail: ${data.emailInput}
-  Github: ${data.userName}
+  - eMail: ${data.emailInput}
+  - Github: ${data.userName}
 
   ### Tests
   ${data.test}
