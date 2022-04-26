@@ -10,7 +10,7 @@
   - Questions
   
   ### Description 
-  This is a command line app that allows users to input information based on prompts in their command line and have a professional README get generated! once their readme is generated they can copy and paste the markup into their current readme, or just move the file.
+  This is a command line app that allows users to input information based on prompts in their command line and have a professional README get generated! once their readme is generated they can copy and paste the markup into their current readme, or just move the file. This README was generated using the app!
 
   ### Installation Instructions
   NPM Install needs to be run, inquirer NPM. Node is necessary as well.
